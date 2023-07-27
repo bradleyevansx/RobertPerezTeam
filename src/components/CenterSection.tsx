@@ -42,6 +42,8 @@ const CenterSection = () => {
         src={video}
         autoPlay
         loop
+        muted
+        playsInline
         style={{ minHeight: "100%", objectFit: "cover" }}
       />
       <div
