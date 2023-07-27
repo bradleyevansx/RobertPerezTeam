@@ -1,6 +1,5 @@
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { IconButton, Text, VStack } from "@chakra-ui/react";
-import React from "react";
 import video from "../assets/photos/tampa-video.mp4";
 
 const CenterSection = () => {

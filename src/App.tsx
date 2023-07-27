@@ -1,7 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import CenterSection from "./components/CenterSection";
-import HomePageCenter from "./components/CenterSection";
 import ContactSection from "./components/ContactSection";
 import NavBar from "./components/NavBar";
 
