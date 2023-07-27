@@ -1,8 +1,33 @@
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { IconButton, Text, VStack } from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
 import video from "../assets/photos/tampa-video.mp4";
 
 const CenterSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Try to autoplay the video once the component has mounted
+    tryAutoPlayVideo();
+  }, []);
+
+  const tryAutoPlayVideo = () => {
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play();
+
+      // Modern browsers support the 'play' method that returns a promise
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Autoplay started successfully
+          })
+          .catch((error) => {
+            // Autoplay was prevented. You can handle the error here.
+            console.log("Autoplay prevented:", error);
+          });
+      }
+    }
+  };
   return (
     <div
       style={{
@@ -13,6 +38,7 @@ const CenterSection = () => {
       }}
     >
       <video
+        ref={videoRef}
         src={video}
         autoPlay
         loop
