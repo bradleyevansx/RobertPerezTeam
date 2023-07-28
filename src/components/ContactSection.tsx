@@ -1,3 +1,4 @@
+import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
 import { Button, HStack, Text, VStack } from "@chakra-ui/react";
 
 const ContactSection = () => {
@@ -12,13 +13,23 @@ const ContactSection = () => {
           Let us know how our dedicated team of Tampa Bay real estate agents can
           help you today
         </Text>
-        <Button
-          marginTop={"5px"}
-          size={{ base: "md", md: "lg" }}
-          colorScheme={"red"}
-        >
-          Contact
-        </Button>
+        <HStack mb={"10px"} mt={"5px"}>
+          <Button
+            leftIcon={<EmailIcon />}
+            variant="outline"
+            size={{ base: "md", md: "lg" }}
+            colorScheme={"red"}
+          >
+            Email
+          </Button>
+          <Button
+            leftIcon={<PhoneIcon />}
+            size={{ base: "md", md: "lg" }}
+            colorScheme={"red"}
+          >
+            Call Us
+          </Button>
+        </HStack>
       </VStack>
     </HStack>
   );

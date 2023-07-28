@@ -43,7 +43,7 @@ const NavBar = () => {
               About Us
             </Link>
             <Link letterSpacing={letterSpacing}>Reviews</Link>
-            <Button colorScheme="blackAlpha">Call</Button>
+            <Button colorScheme="blackAlpha">Contact</Button>
           </HStack>
         )}
       </HStack>
