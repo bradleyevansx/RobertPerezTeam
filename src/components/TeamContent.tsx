@@ -1,11 +1,4 @@
-import {
-  Box,
-  Card,
-  CardBody,
-  CardHeader,
-  HStack,
-  Image,
-} from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, HStack, Image } from "@chakra-ui/react";
 import robert from "../assets/photos/Robert.jpg";
 import tonya from "../assets/photos/Tonya.jpg";
 
