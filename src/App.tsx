@@ -1,13 +1,13 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
-import CenterSection from "./components/CenterSection";
-import ContactSection from "./components/ContactSection";
+import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
       <Grid
+        bgGradient={"linear(to-t, white, #EDF2F7 90%)"}
         templateAreas={{
           base: `"nav" "main"`,
         }}
@@ -17,8 +17,7 @@ function App() {
           <NavBar></NavBar>
         </GridItem>
         <GridItem area="main">
-          <CenterSection></CenterSection>
-          <ContactSection></ContactSection>
+          <Home></Home>
         </GridItem>
       </Grid>
     </>

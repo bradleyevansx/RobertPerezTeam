@@ -42,7 +42,8 @@ const NavBar = () => {
             <Link whiteSpace={"nowrap"} letterSpacing={letterSpacing}>
               About Us
             </Link>
-            <Button colorScheme="blackAlpha">Contact</Button>
+            <Link letterSpacing={letterSpacing}>Reviews</Link>
+            <Button colorScheme="blackAlpha">Call</Button>
           </HStack>
         )}
       </HStack>

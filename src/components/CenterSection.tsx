@@ -7,7 +7,6 @@ const CenterSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Try to autoplay the video once the component has mounted
     tryAutoPlayVideo();
   }, []);
 
@@ -15,14 +14,10 @@ const CenterSection = () => {
     if (videoRef.current) {
       const playPromise = videoRef.current.play();
 
-      // Modern browsers support the 'play' method that returns a promise
       if (playPromise !== undefined) {
         playPromise
-          .then(() => {
-            // Autoplay started successfully
-          })
+          .then(() => {})
           .catch((error) => {
-            // Autoplay was prevented. You can handle the error here.
             console.log("Autoplay prevented:", error);
           });
       }
@@ -59,6 +54,7 @@ const CenterSection = () => {
       >
         <VStack>
           <Text
+            textShadow={"0 0 10px black"}
             whiteSpace={"nowrap"}
             letterSpacing={"-2px"}
             textAlign={"center"}
@@ -67,6 +63,7 @@ const CenterSection = () => {
             Premier Tampa Bay<br></br> Real Estate
           </Text>
           <Text
+            textShadow={"0 0 5px black"}
             letterSpacing={"2px"}
             marginTop={"-10px"}
             fontFamily={"serif"}
