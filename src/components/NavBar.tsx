@@ -22,6 +22,7 @@ const NavBar = () => {
   return (
     <>
       <HStack
+        width={"100vw"}
         padding={{ base: "0 15px", md: "0 40px" }}
         justifyContent={"space-between"}
         boxShadow="0 0 10px white"

@@ -1,4 +1,12 @@
-import { Card, CardBody, CardHeader, HStack, Image } from "@chakra-ui/react";
+import {
+  Avatar,
+  Card,
+  CardBody,
+  Heading,
+  HStack,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import robert from "../assets/photos/Robert.jpg";
 import tonya from "../assets/photos/Tonya.jpg";
 
@@ -12,19 +20,32 @@ const TeamContent = () => {
         minWidth={{ base: "350px", md: "500px" }}
         height="300px"
       >
-        <CardHeader fontWeight={"bold"} fontSize="1.5rem">
-          Welcome
-        </CardHeader>
         <CardBody>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aliquam
-          iusto consequuntur quaerat fuga et neque facilis quam debitis
-          voluptatibus culpa omnis hic exercitationem voluptas, nostrum nam
-          ullam velit magnam!
+          <Heading
+            display={"flex"}
+            justifyContent="space-between"
+            alignItems={"center"}
+            mb={"5px"}
+            size={"lg"}
+          >
+            Welcome{" "}
+            <Avatar
+              display={{ base: "inherit", sm: "none", md: "none" }}
+              size={"lg"}
+              src={robert}
+            ></Avatar>
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
+            aliquam iusto consequuntur quaerat fuga et neque facilis quam
+            debitis voluptatibus culpa omnis hic exercitationem voluptas,
+            nostrum nam ullam velit magnam!
+          </Text>
         </CardBody>
       </Card>
       <Image
         boxShadow={"lg"}
-        display={{ base: "none", md: "inherit", lg: "inherit" }}
+        display={{ base: "none", sm: "inherit", md: "inherit", lg: "inherit" }}
         height={"300px"}
         objectFit={"cover"}
         borderRadius={"10px"}
@@ -32,12 +53,11 @@ const TeamContent = () => {
       ></Image>
       <Image
         boxShadow={"lg"}
-        display={{ base: "none", md: "none", lg: "inherit" }}
+        display={{ base: "none", sm: "none", md: "none", lg: "inherit" }}
         borderRadius={"10px"}
         height={"300px"}
         src={tonya}
       ></Image>
-      ,
     </HStack>
   );
 };

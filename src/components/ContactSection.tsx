@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <HStack justifyContent={"center"}>
       <VStack
-        width={{ base: "350px", md: "740px", lg: "940px" }}
+        width={{ base: "350px", sm: "540px", md: "740px", lg: "940px" }}
         padding={"10px"}
         marginTop={"10px"}
       >
