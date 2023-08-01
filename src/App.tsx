@@ -7,7 +7,8 @@ function App() {
   return (
     <>
       <Grid
-        bgGradient={"linear(to-t, white, #EDF2F7 90%)"}
+        overflowX={"hidden"}
+        bg={"whitesmoke"}
         templateAreas={{
           base: `"nav" "main"`,
         }}
