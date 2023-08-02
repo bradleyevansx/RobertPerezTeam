@@ -3,9 +3,12 @@ import { Button, HStack, Text, VStack } from "@chakra-ui/react";
 
 const ContactSection = () => {
   return (
-    <HStack mt={210} justifyContent={"center"}>
+    <HStack
+      mt={{ base: 210, md: 0 }}
+      justifyContent={{ base: "center", lg: "start" }}
+    >
       <VStack
-        width={{ base: "350px", sm: "460px", md: "740px", lg: "940px" }}
+        width={{ base: "350px", sm: "460px", md: "740px", lg: "500px" }}
         padding={"10px"}
         marginTop={"10px"}
       >
