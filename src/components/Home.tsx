@@ -32,7 +32,7 @@ const Home = () => {
           <br /> moving today.
         </Heading>
         <Image
-          mt={{ base: 0, lg: 125, xl: 200, "2xl": "300" }}
+          mt={{ base: 0, md: 35, lg: 125, xl: 200, "2xl": "300" }}
           boxShadow={"lg"}
           height={{ base: "300px", lg: "375px", xl: "500px", "2xl": "600px" }}
           width={{ base: "375px", lg: "450px", xl: "700px", "2xl": "1000px" }}

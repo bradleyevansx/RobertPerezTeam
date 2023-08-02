@@ -1,11 +1,25 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Button, HStack, IconButton, Image, Link } from "@chakra-ui/react";
+import {
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  HStack,
+  IconButton,
+  Image,
+  Link,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import logo from "../assets/photos/logo.png";
 
 const letterSpacing = "2px";
 
 const NavBar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -40,6 +54,7 @@ const NavBar = () => {
           <Image src={logo} height="75px"></Image>
           {isMobile ? (
             <IconButton
+              onClick={onOpen}
               margin={"auto 0"}
               isRound={true}
               variant="outline"
@@ -59,6 +74,24 @@ const NavBar = () => {
           )}
         </HStack>
       </HStack>
+      <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader textAlign={"center"} borderBottomWidth="1px">
+            Robert Perez
+          </DrawerHeader>
+          <DrawerBody>
+            <VStack mt={5} gap={7}>
+              <Link letterSpacing={letterSpacing}>Home</Link>
+              <Link whiteSpace={"nowrap"} letterSpacing={letterSpacing}>
+                About Us
+              </Link>
+              <Link letterSpacing={letterSpacing}>Reviews</Link>
+              <Button colorScheme="blackAlpha">Contact</Button>
+            </VStack>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </>
   );
 };
