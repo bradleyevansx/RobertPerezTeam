@@ -35,7 +35,7 @@ const NavBar = () => {
       <HStack position={"fixed"} width={"100%"} justifyContent={"center"}>
         <HStack
           maxW={"1570px"}
-          zIndex={100}
+          zIndex={1000}
           justifyContent={"center"}
           width={"100%"}
           top={"0"}
