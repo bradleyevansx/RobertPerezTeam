@@ -1,74 +1,45 @@
-import {
-  Card,
-  CardBody,
-  Divider,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import robert from "../../assets/photos/Robert.jpg";
-import tonya from "../../assets/photos/Tonya.jpg";
-import HomeHeading from "../home/HomeHeading";
+import { Box, Heading, Image } from "@chakra-ui/react";
+import house1 from "../../assets/photos/house1.webp";
+
+import useViewportHeight from "../../hooks/useViewportHeight";
 
 const AboutUs = () => {
+  const availableHeight = useViewportHeight();
+
   return (
     <>
-      <HomeHeading></HomeHeading>
-      <VStack width={"100vw"} gap={2}>
-        <HStack width={"100%"} padding={5}>
-          <Card maxW={"xl"} maxH={"md"}>
-            <CardBody borderRadius={10}>
-              <Heading textAlign={"center"} mb={1}>
-                Robert Perez
-              </Heading>
-              <Divider mb={3} />
-              <HStack>
-                <Image
-                  boxSize={150}
-                  objectFit={"cover"}
-                  borderRadius={10}
-                  src={robert}
-                ></Image>
-                <Text ml={2} height={"300px"}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Iusto quaerat mollitia, nihil, dolores modi quidem labore
-                  aperiam porro adipisci ducimus ratione facilis iure
-                  perspiciatis. Delectus reprehenderit modi officia. Sint,
-                  doloremque. Optio maiores asperiores dicta, aperiam officiis
-                  dignissimos soluta doloremque itaque dolorum id qui eos
-                  libero? Unde dolore modi repellendus labore veritatis quam,
-                  pariatur sunt molestias, omnis doloribus dolores harum nemo.
-                </Text>
-              </HStack>
-            </CardBody>
-          </Card>
-        </HStack>
-        <HStack width={"100%"} padding={5}>
-          <Card maxW={"xl"} maxH={"md"}>
-            <CardBody borderRadius={10}>
-              <Heading textAlign={"center"} mb={1}>
-                Tonya Coglianese
-              </Heading>
-              <Divider mb={3} />
-              <HStack>
-                <Image borderRadius={10} height={"300px"} src={tonya}></Image>
-                <Text ml={2} height={"300px"}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Iusto quaerat mollitia, nihil, dolores modi quidem labore
-                  aperiam porro adipisci ducimus ratione facilis iure
-                  perspiciatis. Delectus reprehenderit modi officia. Sint,
-                  doloremque. Optio maiores asperiores dicta, aperiam officiis
-                  dignissimos soluta doloremque itaque dolorum id qui eos
-                  libero? Unde dolore modi repellendus labore veritatis quam,
-                  pariatur sunt molestias, omnis doloribus dolores harum nemo.
-                </Text>
-              </HStack>
-            </CardBody>
-          </Card>
-        </HStack>
-      </VStack>
+      <Box
+        display={"flex"}
+        flexDir={{ base: "column", md: "row" }}
+        gap={{ base: 8, lg: 0 }}
+        pt={{ base: "130px", md: 20 }}
+        ps={{ base: 2, sm: 5 }}
+        pe={{ base: 2, sm: 5 }}
+        justifyContent="space-between"
+        alignItems={"center"}
+        bg={"red.500"}
+        height={{ base: "342px", md: availableHeight * 0.5 }}
+      >
+        <Heading
+          textShadow={"2xl"}
+          fontFamily={"sans-serif"}
+          color={"white"}
+          fontSize={{ base: "5xl", lg: "7xl" }}
+          whiteSpace={"nowrap"}
+        >
+          Meet The Team
+        </Heading>
+        <Image
+          mt={{ base: 0, md: 3, lg: 125, xl: 200, "2xl": "300" }}
+          boxShadow={"lg"}
+          height={{ base: "300px", lg: "375px", xl: "500px", "2xl": "600px" }}
+          width={{ base: "375px", lg: "450px", xl: "700px", "2xl": "1000px" }}
+          objectFit={"cover"}
+          borderRadius={"2xl"}
+          src={house1}
+        ></Image>
+      </Box>
+      {/* <RobertCard text="test" heading="About Us" image={robert}></RobertCard> */}
     </>
   );
 };
