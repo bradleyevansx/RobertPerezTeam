@@ -4,6 +4,8 @@ import { Button, HStack, Text, VStack } from "@chakra-ui/react";
 const ContactSection = () => {
   return (
     <HStack
+      maxWidth={"1570px"}
+      margin={"0 auto"}
       mt={{ base: 210, md: 0 }}
       justifyContent={{ base: "center", lg: "start" }}
     >

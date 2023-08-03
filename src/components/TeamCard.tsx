@@ -14,13 +14,13 @@ interface Props {
   heading: string;
 }
 
-const RobertCard = ({ image, text, heading }: Props) => (
+const TeamCard = ({ image, text, heading }: Props) => (
   <Card
     boxShadow={"lg"}
     variant={"filled"}
-    width={{ base: "350px", sm: "460px", md: "700px", lg: "900px" }}
-    minWidth={{ base: "350px", sm: "460px", md: "700px", lg: "900px" }}
-    height="300px"
+    width={{ base: "350px", sm: "460px", md: "700px", lg: "700px" }}
+    minWidth={{ base: "350px", sm: "460px", md: "700px", lg: "700px" }}
+    height={{ base: "fit-content", sm: "300px" }}
   >
     <CardBody display={"flex"} flexDirection={"row"}>
       <VStack alignItems={"start"}>
@@ -43,6 +43,7 @@ const RobertCard = ({ image, text, heading }: Props) => (
         <Text>{text}</Text>
       </VStack>
       <Image
+        ml={5}
         display={{ base: "none", md: "inherit" }}
         height={"260px"}
         objectFit={"cover"}
@@ -53,4 +54,4 @@ const RobertCard = ({ image, text, heading }: Props) => (
   </Card>
 );
 
-export default RobertCard;
+export default TeamCard;

@@ -7,6 +7,8 @@ const HomeHeading = () => {
 
   return (
     <Box
+      maxWidth={"1570px"}
+      margin={"0 auto"}
       display={"flex"}
       flexDir={{ base: "column", md: "row" }}
       gap={{ base: 8, lg: 0 }}
@@ -17,6 +19,7 @@ const HomeHeading = () => {
       alignItems={"center"}
       bg={"red.500"}
       height={{ base: "342px", md: availableHeight * 0.5 }}
+      borderBottomRadius={{ base: "none", "2xl": "xl" }}
     >
       <Heading
         textShadow={"2xl"}

@@ -1,46 +1,42 @@
-import { Box, Heading, Image } from "@chakra-ui/react";
-import house1 from "../../assets/photos/House1.webp";
+import TeamCard from "../../components/TeamCard";
+import AboutUsHeader from "./AboutUsHeader";
+import tonya from "../../assets/photos/Tonya.jpg";
+import robert from "../../assets/photos/Robert.jpg";
 
-import useViewportHeight from "../../hooks/useViewportHeight";
+import { Box, HStack } from "@chakra-ui/react";
+
+const tonyaText =
+  "Tonya has been a resident of Florida for over 30 years. She is always accessible via email or phone and is eager to help you find a place to call your forever home. Buying and selling a home takes time, knowledge, and an expert in negotiation. With Tonya's additional legal and finance background, she will progress along the entire process with you, from the very first steps to the moment you close the deal and beyond.";
+const robertText =
+  "Robert is the team leader of the Robert Perez Team at Keller Williams Suburban Tampa. He has been a REALTOR® since 2016 and has lived in Tampa Bav Area for over 16 years. With his connections from living in the area and working as an agent, he is able to assist clients in numerous ways. Robert is a full-service, bilingual, and award-winning real estate agent. He is always available to help you achieve your goals!";
 
 const AboutUs = () => {
-  const availableHeight = useViewportHeight();
-
   return (
-    <>
-      <Box
-        display={"flex"}
-        flexDir={{ base: "column", md: "row" }}
-        gap={{ base: 8, lg: 0 }}
-        pt={{ base: "130px", md: 20 }}
-        ps={{ base: 2, sm: 5 }}
-        pe={{ base: 2, sm: 5 }}
-        justifyContent="space-between"
-        alignItems={"center"}
-        bg={"red.500"}
-        height={{ base: "342px", md: availableHeight * 0.5 }}
+    <Box overflow={"hidden"} pb={5}>
+      <AboutUsHeader />
+      <HStack
+        ps={{ base: 0, sm: 5, md: 50 }}
+        mt={5}
+        justifyContent={{ base: "center", sm: "start" }}
       >
-        <Heading
-          textShadow={"2xl"}
-          fontFamily={"sans-serif"}
-          color={"white"}
-          fontSize={{ base: "5xl", lg: "7xl" }}
-          whiteSpace={"nowrap"}
-        >
-          Meet The Team
-        </Heading>
-        <Image
-          mt={{ base: 0, md: 3, lg: 125, xl: 200, "2xl": "300" }}
-          boxShadow={"lg"}
-          height={{ base: "300px", lg: "375px", xl: "500px", "2xl": "600px" }}
-          width={{ base: "375px", lg: "450px", xl: "700px", "2xl": "1000px" }}
-          objectFit={"cover"}
-          borderRadius={"2xl"}
-          src={house1}
-        ></Image>
-      </Box>
-      {/* <RobertCard text="test" heading="About Us" image={robert}></RobertCard> */}
-    </>
+        <TeamCard
+          text={robertText}
+          heading="Robert Perez - Team Leader"
+          image={robert}
+        ></TeamCard>
+      </HStack>
+      <HStack
+        pe={{ base: 0, sm: 5, md: 50 }}
+        mt={5}
+        justifyContent={{ base: "center", sm: "end" }}
+      >
+        <TeamCard
+          text={tonyaText}
+          heading="Tonya Coglianese - REALTOR®"
+          image={tonya}
+        ></TeamCard>
+      </HStack>
+    </Box>
   );
 };
 

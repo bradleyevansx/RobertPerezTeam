@@ -1,7 +1,7 @@
 import { HStack } from "@chakra-ui/react";
 import ContactSection from "./ContactSection";
 import HomeHeading from "./HomeHeading";
-import RobertCard from "./RobertCard";
+import TeamCard from "../../components/TeamCard";
 import robert from "../../assets/photos/Robert.jpg";
 const text =
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aliquam iusto consequuntur quaerat fuga et neque facilis quam debitis voluptatibus culpa omnis hic exercitationem voluptas, nostrum nam ullam velit magnam!";
@@ -16,7 +16,7 @@ const Home = () => {
         justify={"center"}
         padding={"10px"}
       >
-        <RobertCard text={text} heading={"Welcome"} image={robert} />
+        <TeamCard text={text} heading={"Welcome"} image={robert} />
       </HStack>
     </>
   );

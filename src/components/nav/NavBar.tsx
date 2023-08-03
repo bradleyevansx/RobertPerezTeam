@@ -32,54 +32,56 @@ const NavBar = () => {
   }, []);
   return (
     <>
-      <HStack
-        zIndex={100}
-        justifyContent={"center"}
-        width={"100%"}
-        position={"fixed"}
-        top={"0"}
-        left={"0"}
-      >
+      <HStack position={"fixed"} width={"100%"} justifyContent={"center"}>
         <HStack
-          justifyContent={"space-between"}
-          margin={"10px 30px"}
+          maxW={"1570px"}
+          zIndex={100}
+          justifyContent={"center"}
           width={"100%"}
-          borderRadius={"2xl"}
-          bg={"whitesmoke"}
-          padding={{ base: "0 20px", md: "0 20px" }}
-          shadow="xl"
+          top={"0"}
+          left={"0"}
         >
-          <Image src={logo} height="75px"></Image>
-          {isMobile ? (
-            <IconButton
-              onClick={onOpen}
-              margin={"auto 0"}
-              isRound={true}
-              variant="outline"
-              aria-label="Done"
-              fontSize="20px"
-              icon={<HamburgerIcon />}
-            />
-          ) : (
-            <HStack justifyContent={"space-between"} gap={5}>
-              <Links />
-            </HStack>
-          )}
+          <HStack
+            justifyContent={"space-between"}
+            margin={"10px 30px"}
+            width={"100%"}
+            borderRadius={"2xl"}
+            bg={"whitesmoke"}
+            padding={{ base: "0 20px", md: "0 20px" }}
+            shadow="xl"
+          >
+            <Image src={logo} height="75px"></Image>
+            {isMobile ? (
+              <IconButton
+                onClick={onOpen}
+                margin={"auto 0"}
+                isRound={true}
+                variant="outline"
+                aria-label="Done"
+                fontSize="20px"
+                icon={<HamburgerIcon />}
+              />
+            ) : (
+              <HStack justifyContent={"space-between"} gap={5}>
+                <Links />
+              </HStack>
+            )}
+          </HStack>
         </HStack>
+        <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader textAlign={"center"} borderBottomWidth="1px">
+              Robert Perez
+            </DrawerHeader>
+            <DrawerBody>
+              <VStack mt={5} gap={7}>
+                <Links />
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </HStack>
-      <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader textAlign={"center"} borderBottomWidth="1px">
-            Robert Perez
-          </DrawerHeader>
-          <DrawerBody>
-            <VStack mt={5} gap={7}>
-              <Links />
-            </VStack>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
     </>
   );
 };
