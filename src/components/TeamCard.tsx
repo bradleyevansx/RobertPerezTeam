@@ -16,6 +16,7 @@ interface Props {
 
 const TeamCard = ({ image, text, heading }: Props) => (
   <Card
+    zIndex={"base"}
     boxShadow={"lg"}
     variant={"filled"}
     width={{ base: "350px", sm: "460px", md: "700px", lg: "700px" }}
