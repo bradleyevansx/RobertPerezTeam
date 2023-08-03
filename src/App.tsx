@@ -1,11 +1,13 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
-import Home from "./components/Home";
-import NavBar from "./components/NavBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import NavBar from "./components/nav/NavBar";
+import AboutUs from "./pages/aboutUs/AboutUs";
 
 function App() {
   return (
-    <>
+    <Router>
       <Grid
         overflowX={"hidden"}
         bg={"whitesmoke"}
@@ -18,10 +20,13 @@ function App() {
           <NavBar></NavBar>
         </GridItem>
         <GridItem area="main">
-          <Home></Home>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+          </Routes>
         </GridItem>
       </Grid>
-    </>
+    </Router>
   );
 }
 

@@ -8,12 +8,14 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import robert from "../assets/photos/Robert.jpg";
-import tonya from "../assets/photos/Tonya.jpg";
+import robert from "../../assets/photos/Robert.jpg";
+import tonya from "../../assets/photos/Tonya.jpg";
+import HomeHeading from "../home/HomeHeading";
 
 const AboutUs = () => {
   return (
     <>
+      <HomeHeading></HomeHeading>
       <VStack width={"100vw"} gap={2}>
         <HStack width={"100%"} padding={5}>
           <Card maxW={"xl"} maxH={"md"}>

@@ -1,6 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
-  Button,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -9,14 +8,12 @@ import {
   HStack,
   IconButton,
   Image,
-  Link,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import logo from "../assets/photos/logo.png";
-
-const letterSpacing = "2px";
+import logo from "../../assets/photos/logo.png";
+import Links from "./Links";
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,6 +33,7 @@ const NavBar = () => {
   return (
     <>
       <HStack
+        zIndex={100}
         justifyContent={"center"}
         width={"100%"}
         position={"fixed"}
@@ -44,7 +42,7 @@ const NavBar = () => {
       >
         <HStack
           justifyContent={"space-between"}
-          margin={"10px 50px"}
+          margin={"10px 30px"}
           width={"100%"}
           borderRadius={"2xl"}
           bg={"whitesmoke"}
@@ -64,12 +62,7 @@ const NavBar = () => {
             />
           ) : (
             <HStack justifyContent={"space-between"} gap={5}>
-              <Link letterSpacing={letterSpacing}>Home</Link>
-              <Link whiteSpace={"nowrap"} letterSpacing={letterSpacing}>
-                About Us
-              </Link>
-              <Link letterSpacing={letterSpacing}>Reviews</Link>
-              <Button colorScheme="blackAlpha">Contact</Button>
+              <Links />
             </HStack>
           )}
         </HStack>
@@ -82,12 +75,7 @@ const NavBar = () => {
           </DrawerHeader>
           <DrawerBody>
             <VStack mt={5} gap={7}>
-              <Link letterSpacing={letterSpacing}>Home</Link>
-              <Link whiteSpace={"nowrap"} letterSpacing={letterSpacing}>
-                About Us
-              </Link>
-              <Link letterSpacing={letterSpacing}>Reviews</Link>
-              <Button colorScheme="blackAlpha">Contact</Button>
+              <Links />
             </VStack>
           </DrawerBody>
         </DrawerContent>
