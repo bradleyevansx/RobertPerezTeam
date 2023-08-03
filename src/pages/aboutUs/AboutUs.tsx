@@ -1,5 +1,5 @@
 import { Box, Heading, Image } from "@chakra-ui/react";
-import house1 from "../../assets/photos/house1.webp";
+import house1 from "../../assets/photos/House1.webp";
 
 import useViewportHeight from "../../hooks/useViewportHeight";
 
