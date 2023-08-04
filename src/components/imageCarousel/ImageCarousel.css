@@ -4,6 +4,7 @@
 }
 
 .carousel {
+  border-radius: 10px;
   display: grid;
   grid-auto-flow: column;
   scroll-behavior: auto;
@@ -31,6 +32,7 @@
 
 @media screen and (min-width: 480px) {
   .card {
+    scroll-snap-align: center;
     min-height: 300px;
     height: 300px;
     min-width: 500px;
