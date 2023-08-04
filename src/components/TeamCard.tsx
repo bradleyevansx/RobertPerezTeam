@@ -1,9 +1,9 @@
 import {
-  Image,
   Avatar,
   Card,
   CardBody,
   Heading,
+  Image,
   Text,
   VStack,
 } from "@chakra-ui/react";
