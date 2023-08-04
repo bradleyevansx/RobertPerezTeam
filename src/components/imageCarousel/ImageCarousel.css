@@ -1,0 +1,39 @@
+.conteudo {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  scroll-snap-align: start;
+  min-height: 200px;
+  height: 200px;
+  min-width: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 480px) {
+  .card {
+    min-height: 300px;
+    height: 300px;
+    min-width: 500px;
+    width: 500px;
+  }
+}

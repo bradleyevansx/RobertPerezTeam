@@ -1,11 +1,11 @@
 import robert from "../../assets/photos/Robert.jpg";
 import tonya from "../../assets/photos/Tonya.jpg";
-import pool from "../../assets/photos/Pool.jpg";
 
 import TeamCard from "../../components/TeamCard";
 import AboutUsHeader from "./AboutUsHeader";
 
-import { Box, HStack, Image } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
+import ImageCarousel from "../../components/imageCarousel/ImageCarousel";
 import JoinTheTeam from "./JoinTheTeam";
 
 const tonyaText =
@@ -37,8 +37,9 @@ const AboutUs = () => {
           ></TeamCard>
         </Box>
       </HStack>
-      <HStack height={"350px"} justifyContent={{ base: "center", sm: "start" }}>
-        <Image
+      <HStack height={{ base: "250px", sm: "350px" }} justifyContent={"center"}>
+        <ImageCarousel></ImageCarousel>
+        {/* <Image
           width={{ base: "350px", sm: "460px" }}
           objectFit={"cover"}
           margin={"0 auto"}
@@ -46,7 +47,7 @@ const AboutUs = () => {
           height={"300px"}
           borderRadius={"xl"}
           src={pool}
-        ></Image>
+        ></Image> */}
       </HStack>
       <HStack
         display={{ base: "flex", "2xl": "none" }}
