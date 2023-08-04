@@ -39,15 +39,6 @@ const AboutUs = () => {
       </HStack>
       <HStack height={{ base: "250px", sm: "350px" }} justifyContent={"center"}>
         <ImageCarousel></ImageCarousel>
-        {/* <Image
-          width={{ base: "350px", sm: "460px" }}
-          objectFit={"cover"}
-          margin={"0 auto"}
-          shadow={"xl"}
-          height={"300px"}
-          borderRadius={"xl"}
-          src={pool}
-        ></Image> */}
       </HStack>
       <HStack
         display={{ base: "flex", "2xl": "none" }}

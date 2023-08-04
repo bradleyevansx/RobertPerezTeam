@@ -15,6 +15,8 @@ import { useEffect, useState } from "react";
 import logo from "../../assets/photos/logo.png";
 import Links from "./Links";
 
+import { Link as ReactRouterLink } from "react-router-dom";
+
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -54,7 +56,9 @@ const NavBar = () => {
             padding={{ base: "0 20px", md: "0 20px" }}
             shadow="xl"
           >
-            <Image src={logo} height="75px"></Image>
+            <ReactRouterLink to="/">
+              <Image src={logo} height="75px"></Image>
+            </ReactRouterLink>
             {isMobile ? (
               <IconButton
                 onClick={onOpen}
