@@ -1,4 +1,4 @@
-import house1 from "../../assets/photos/House1.webp";
+import house1 from "../../assets/photos/ExtHouse10.webp";
 import { Box, Heading, Image } from "@chakra-ui/react";
 import useViewportHeight from "../../hooks/useViewportHeight";
 

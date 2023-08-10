@@ -22,7 +22,7 @@ const AboutUs = () => {
         height={{ base: "431px", sm: "350px" }}
         bgGradient={"linear(to-r, whitesmoke, gray.200)"}
         ps={{ base: 0, sm: 5, md: 50, "2xl": 0 }}
-        justifyContent={{ base: "center", sm: "start", "2xl": "center" }}
+        justifyContent={{ base: "center", "2xl": "center" }}
       >
         <TeamCard
           text={robertText}
@@ -45,7 +45,7 @@ const AboutUs = () => {
         height={{ base: "431px", sm: "350px" }}
         bgGradient={"linear(to-r, gray.200, whitesmoke 90%)"}
         pe={{ base: 0, sm: 5, md: 50 }}
-        justifyContent={{ base: "center", sm: "end" }}
+        justifyContent={"center"}
       >
         <TeamCard
           text={tonyaText}

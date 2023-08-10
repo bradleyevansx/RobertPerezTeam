@@ -18,7 +18,7 @@ const TeamCard = ({ image, text, heading }: Props) => (
   <Card
     zIndex={"base"}
     boxShadow={"lg"}
-    variant={"filled"}
+    variant={"elevated"}
     width={{ base: "350px", sm: "460px", md: "700px", lg: "700px" }}
     minWidth={{ base: "350px", sm: "460px", md: "700px", lg: "700px" }}
     height={{ base: "fit-content", sm: "300px" }}

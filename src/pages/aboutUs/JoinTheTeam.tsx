@@ -1,14 +1,24 @@
-import { Button, Heading, VStack, Text } from "@chakra-ui/react";
+import { Button, Heading, VStack, Text, Card, Divider } from "@chakra-ui/react";
 
 const JoinTheTeam = () => (
   <VStack mt={5} mb={5}>
-    <VStack shadow={"xl"} bg={"red.200"} padding={5} borderRadius={"2xl"}>
-      <Heading>Join The Team</Heading>
+    <Card variant={"outline"} shadow={"xl"} padding={5} borderRadius={"2xl"}>
+      <Heading textAlign={"center"}>Join The Team</Heading>
+      <Divider mb={3}></Divider>
       <Text textAlign={"center"}>
         We are always looking for new people <br /> to join our team.
       </Text>
-      <Button colorScheme={"red"}>Join</Button>
-    </VStack>
+      <Button
+        mt={4}
+        ms="auto"
+        me="auto"
+        size={"md"}
+        width="fit-content"
+        colorScheme={"red"}
+      >
+        Join
+      </Button>
+    </Card>
   </VStack>
 );
 
