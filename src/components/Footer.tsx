@@ -1,11 +1,16 @@
-import { HStack } from "@chakra-ui/react";
+import { HStack, Text } from "@chakra-ui/react";
+import SocialsCard from "./SocialsCard";
 const Footer = () => {
   return (
     <HStack
+      padding={5}
       boxShadow={"0 0 10px lightgray"}
-      bg={"gray.200"}
+      bg={"gray.400"}
       height={"100px"}
-    ></HStack>
+    >
+      <Text>© 2023 Robert Perez Team. All Rights Reserved.</Text>
+      <SocialsCard></SocialsCard>
+    </HStack>
   );
 };
 

@@ -17,7 +17,6 @@ const Links = () => {
       >
         About Us
       </ChakraLink>
-      <ChakraLink letterSpacing={letterSpacing}>Reviews</ChakraLink>
       <Button colorScheme="blackAlpha">Contact</Button>
     </>
   );
