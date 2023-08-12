@@ -1,4 +1,4 @@
-import { Heading, HStack, VStack, Image, Divider } from "@chakra-ui/react";
+import { Heading, HStack, Image, VStack } from "@chakra-ui/react";
 import bathroom2 from "../../assets/photos/Bathroom2.webp";
 import kitchen7 from "../../assets/photos/Kitchen7.jpg";
 import pool1 from "../../assets/photos/Pool1.jpg";
