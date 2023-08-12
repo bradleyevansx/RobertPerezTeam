@@ -21,7 +21,7 @@ const Experiences = () => {
       <VStack mb={5}>
         <Heading mb={5}>Testimonials</Heading>
         {reviews.map((review) => (
-          <VStack mb={5} width={"359px"}>
+          <VStack mb={5} width={{ base: "359px", md: "600px" }}>
             <Text textAlign={"center"}>{review.text}</Text>
             <Heading fontSize={"xl"}>{review.name}</Heading>
           </VStack>
