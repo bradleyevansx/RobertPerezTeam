@@ -1,7 +1,8 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { Heading, HStack, VStack } from "@chakra-ui/react";
 import { easeIn, motion } from "framer-motion";
 import { BuySellInvest } from "./BuySellInvest";
 import ContactSection from "./ContactSection";
+import Experiences from "./Experiences";
 import HomeHeading from "./HomeHeading";
 import LocationsWeServe from "./LocationsWeServe";
 
@@ -10,7 +11,12 @@ const Home = () => {
     <>
       <HomeHeading />
       <ContactSection />
-      <HStack margin={"0 auto"} maxWidth={"1051px"} justifyContent={"center"}>
+      <HStack
+        margin={"0 auto"}
+        mb={{ base: 0, lg: 50 }}
+        maxWidth={"1051px"}
+        justifyContent={"center"}
+      >
         <LocationsWeServe />
       </HStack>
       <motion.div
@@ -21,12 +27,23 @@ const Home = () => {
           transition: { duration: 0.4, ease: easeIn },
         }}
       >
-        <Text textAlign={"center"} padding={5} fontSize={"2xl"}>
+        <Heading
+          color={"red.500"}
+          margin={"0 auto"}
+          mb={{ base: 0, lg: 50 }}
+          width={{ base: "unset", lg: "800px" }}
+          textAlign={"center"}
+          padding={5}
+          fontSize={{ base: "2xl", lg: "4xl" }}
+        >
           Robert Perez Team is ready to assist buyers, sellers, and investors
           interested in the Greater Tampa Bay Area.
-        </Text>
+        </Heading>
       </motion.div>
       <BuySellInvest />
+      <VStack bg={"gray.100"} pt={5} boxShadow={"0 0 7px lightgray"}>
+        <Experiences></Experiences>
+      </VStack>
     </>
   );
 };

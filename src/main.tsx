@@ -4,6 +4,7 @@ import App from "./App";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 import "./index.css";
+import "@fontsource/quicksand";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

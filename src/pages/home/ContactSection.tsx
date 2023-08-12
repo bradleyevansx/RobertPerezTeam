@@ -7,6 +7,7 @@ const ContactSection = () => {
       maxWidth={"1570px"}
       margin={"0 auto"}
       mt={{ base: 210, md: 0 }}
+      mb={{ base: 0, lg: 50 }}
       justifyContent={{ base: "center", lg: "start" }}
     >
       <VStack
@@ -19,21 +20,25 @@ const ContactSection = () => {
           help you today!
         </Text>
         <HStack mb={"10px"} mt={"5px"}>
-          <Button
-            leftIcon={<EmailIcon />}
-            variant="outline"
-            size={{ base: "md", md: "lg" }}
-            colorScheme={"red"}
-          >
-            Email
-          </Button>
-          <Button
-            leftIcon={<PhoneIcon />}
-            size={{ base: "md", md: "lg" }}
-            colorScheme={"red"}
-          >
-            Call Us
-          </Button>
+          <a href="mailto:robert@robertperezteam.com">
+            <Button
+              leftIcon={<EmailIcon />}
+              variant="outline"
+              size={{ base: "md", md: "lg" }}
+              colorScheme={"red"}
+            >
+              Email
+            </Button>
+          </a>
+          <a href="tel:8137502000">
+            <Button
+              leftIcon={<PhoneIcon />}
+              size={{ base: "md", md: "lg" }}
+              colorScheme={"red"}
+            >
+              Call Us
+            </Button>
+          </a>
         </HStack>
       </VStack>
     </HStack>

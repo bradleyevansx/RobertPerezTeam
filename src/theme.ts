@@ -5,6 +5,10 @@ const config: ThemeConfig = {
 };
 
 const theme = extendTheme({
+  fonts: {
+    heading: `'Quicksand', sans-serif`,
+    body: `'Quicksand', sans-serif`,
+  },
   config,
   colors: {
     gray: {
