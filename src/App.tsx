@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -24,6 +25,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
           </Routes>
+
+          <Footer />
         </GridItem>
       </Grid>
     </Router>
