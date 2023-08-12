@@ -13,6 +13,7 @@ const Home = () => {
       <ContactSection />
       <HStack
         margin={"0 auto"}
+        mt={{ base: 0, "2xl": 150 }}
         mb={{ base: 0, lg: 50 }}
         maxWidth={"1051px"}
         justifyContent={"center"}
