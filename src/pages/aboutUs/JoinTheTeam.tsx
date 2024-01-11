@@ -9,14 +9,15 @@ const JoinTheTeam = () => (
         We are always looking for new people <br /> to join our team.
       </Text>
       <Button
+        isDisabled={true}
         mt={4}
         ms="auto"
         me="auto"
         size={"md"}
         width="fit-content"
-        colorScheme={"red"}
+        colorScheme="red"
       >
-        Join
+        Coming Soon
       </Button>
     </Card>
   </VStack>

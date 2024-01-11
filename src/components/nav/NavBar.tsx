@@ -84,7 +84,7 @@ const NavBar = () => {
             </DrawerHeader>
             <DrawerBody>
               <VStack mt={5} gap={7}>
-                <Links />
+                <Links onClose={onClose} />
               </VStack>
             </DrawerBody>
           </DrawerContent>

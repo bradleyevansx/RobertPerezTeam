@@ -18,8 +18,8 @@ export function LocationTagGroup({}) {
       display="flex"
       flexWrap={"wrap"}
     >
-      {locations.map((location) => (
-        <LocationTag location={location}></LocationTag>
+      {locations.map((location, index) => (
+        <LocationTag key={index} location={location}></LocationTag>
       ))}
     </HStack>
   );

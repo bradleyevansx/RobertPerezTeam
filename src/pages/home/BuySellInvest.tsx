@@ -26,8 +26,8 @@ export function BuySellInvest({}) {
         }}
         overflow="hidden"
       >
-        {mobileImages.map((obj) => (
-          <VStack>
+        {mobileImages.map((obj, index) => (
+          <VStack key={index}>
             <Heading color={"#444"}>{obj.text}</Heading>
             <Image
               objectFit={"cover"}
@@ -48,8 +48,8 @@ export function BuySellInvest({}) {
         }}
         overflow="hidden"
       >
-        {desktopImages.map((obj) => (
-          <VStack>
+        {desktopImages.map((obj, index) => (
+          <VStack key={index}>
             <Heading color={"#444"}>{obj.text}</Heading>
             <Image
               objectFit={"cover"}

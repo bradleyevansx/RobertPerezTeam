@@ -3,13 +3,24 @@ import { Link as ReactRouterLink } from "react-router-dom";
 
 const letterSpacing = "2px";
 
-const Links = () => {
+interface Props {
+  onClose?: () => void;
+}
+
+const Links = ({ onClose }: Props) => {
+  const handleClick = () => (onClose ? onClose() : () => {});
   return (
     <>
-      <ChakraLink as={ReactRouterLink} to="/" letterSpacing={letterSpacing}>
+      <ChakraLink
+        onClick={handleClick}
+        as={ReactRouterLink}
+        to="/"
+        letterSpacing={letterSpacing}
+      >
         Home
       </ChakraLink>
       <ChakraLink
+        onClick={handleClick}
         as={ReactRouterLink}
         to="/about-us"
         whiteSpace={"nowrap"}
@@ -17,7 +28,13 @@ const Links = () => {
       >
         About Us
       </ChakraLink>
-      <Button colorScheme="blackAlpha">Contact</Button>
+      <a
+        onClick={handleClick}
+        target="_blank"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfyd_yCoIg8R0uNnyXl81LjwLf-tPEF-OJIixxQ3ZhwIisZWQ/viewform?usp=sf_link"
+      >
+        <Button colorScheme="blackAlpha">Contact</Button>
+      </a>
     </>
   );
 };
