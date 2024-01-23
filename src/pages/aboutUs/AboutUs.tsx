@@ -11,7 +11,7 @@ import JoinTheTeam from "./JoinTheTeam";
 const tonyaText =
   "Tonya has been a resident of Florida for over 30 years. She is always accessible via email or phone and is eager to help you find a place to call your forever home. Buying and selling a home takes time, knowledge, and an expert in negotiation. With Tonya's additional legal and finance background, she will progress along the entire process with you, from the very first steps to the moment you close the deal and beyond.";
 const robertText =
-  "Robert is the team leader of the Robert Perez Team at Keller Williams Suburban Tampa. He has been a REALTOR® since 2016 and has lived in Tampa Bav Area for over 16 years. With his connections from living in the area and working as an agent, he is able to assist clients in numerous ways. Robert is a full-service, bilingual, and award-winning real estate agent. He is always available to help you achieve your goals!";
+  "Robert is the team leader of the Robert Perez Team at Keller Williams Suburban Tampa. He has been a REALTOR® since 2016 and has lived in Tampa Bay Area for over 16 years. With his connections from living in the area and working as an agent, he is able to assist clients in numerous ways. Robert is a full-service, bilingual, and award-winning real estate agent. He is always available to help you achieve your goals!";
 
 const AboutUs = () => {
   return (
